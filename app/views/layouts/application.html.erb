@@ -2,13 +2,26 @@
 <html>
 <head>
   <title>Meenuuz</title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+	<!--[if lt IE 9]>
+	<script scr="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<!--[endif]-->
 </head>
 <body>
-
-<%= yield %>
+	<div id="top">
+		<h1>meenuuz</h1>
+		slimmer eten en drinken
+	
+	</div>
+	
+	<div class="container content">
+		<% flash.each do  |key, value| %>
+			<div class="alert alert-<%= key %>"><%= value %></div>
+		<% end %>
+		<%= yield %>
+	</div>
 
 </body>
 </html>

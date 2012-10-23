@@ -1,0 +1,40 @@
+:javascript
+	$(function(){
+		$('#myCarousel').carousel();
+	});
+
+.landing
+	.row
+		.span5
+			.lead
+				%p Op zoek naar een restaurant of café? 
+				%p Vind wat je zoekt, bestel en betaal vlot.
+				%p Stukken slimmer!
+			%br	
+			.form-inline
+				= form_for @beta_tester do |f|
+					= f.text_field :email, :value => 'Je emailadres'
+					= f.hidden_field :interested_as, :value => 'user'
+					= f.submit "Hou me op de hoogte", :class => "btn btn-large btn-primary"
+		.span7	
+			.carousel.slide#myCarousel
+				.carousel-inner
+					.active.item
+						.cartext
+							%h3 1. Zoek een café of restaurant in de buurt
+							= image_tag("01-befound.png")
+					.item
+						.cartext
+							%h3 2. Eenvoudig bestellen
+							= image_tag("02-ordering.png")
+					.item
+						.cartext
+							%h3 3. Snel afrekenen
+							= image_tag("03-paying.png")
+					.item
+						.cartext
+							%h3 4. Je ervaring delen met je vrienden
+							= image_tag("04-rating.png")
+	
+	-#%a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+	-#%a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›

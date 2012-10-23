@@ -10,7 +10,7 @@ gem 'rails', '3.1.3'
 gem 'inherited_resources'
 gem 'haml-rails', git: 'https://github.com/indirect/haml-rails.git'
 gem 'paperclip', '~> 3.0'
-gem 'bootstrap-sass', '2.0.4'
+#gem 'bootstrap-sass', '2.0.4'
 gem 'tinymce-rails'
 gem 'devise'
 
@@ -20,6 +20,7 @@ group :assets do
   gem "sass-rails", "3.1.5"
   gem 'coffee-rails', "~> 3.1.1"
   gem 'uglifier', "~> 1.0.3"
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'

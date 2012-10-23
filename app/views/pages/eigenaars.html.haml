@@ -1,0 +1,42 @@
+:javascript
+	$(function(){
+		$('#myCarousel').carousel();
+	});
+
+.landing
+	.row
+		.span5
+			.lead
+				%p Heb je een restaurant of café? 
+				%p Wees klaar voor de smartphone generatie!
+			%br	
+			.form-inline
+				= form_for :beta_tester do |f|
+					= f.text_field :email, :value => 'Je emailadres'
+					= f.submit "Hou me op de hoogte", :class => "btn btn-large btn-primary"
+		.span7	
+			.carousel.slide#myCarousel
+				.carousel-inner
+					.active.item
+						.cartext
+							%h3 1. Je bent makkelijk te vinden
+							%h5 Je klanten zien of jouw restaurant of café in de buurt ligt
+							= image_tag("01-befound.png")
+					.item
+						.cartext
+							%h3 2. Eenvoudig bestellen
+							%h5 Je klanten krijgen snel een overzicht van je menukaart
+							= image_tag("02-ordering.png")
+					.item
+						.cartext
+							%h3 3. Snel afrekenen
+							%h5 Met één druk op de knop hebben je klanten de rekening betaalt
+							= image_tag("03-paying.png")
+					.item
+						.cartext
+							%h3 4. Je klanten zijn je beste reclame
+							%h5 Je klanten vertellen hun vrienden over hun ervaring
+							= image_tag("04-rating.png")
+	
+	-#%a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+	-#%a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›

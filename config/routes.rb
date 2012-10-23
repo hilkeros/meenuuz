@@ -1,4 +1,12 @@
 Meenuuz::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/eigenaars"
+  
+  root to: "beta_testers#new"
+  
+  resources :beta_testers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
