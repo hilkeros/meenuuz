@@ -1,4 +1,6 @@
 Meenuuz::Application.routes.draw do
+  devise_for :owners
+
   get "pages/home"
 
   get "pages/eigenaars"

@@ -1,0 +1,58 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+en:
+  errors:
+    messages:
+      expired: "is verlopen, vraag een nieuwe aan"
+      not_found: "niet gevonden"
+      already_confirmed: "werd reeds bevestigd, probeer in te loggen"
+      not_locked: "werd niet opgeschort"
+      not_saved:
+        one: "1 fout verhinderde dat de %{resource} bewaard werd:"
+        other: "%{count} fouten verhinderden dat de %{resource} bewaard werd:"
+
+  devise:
+    failure:
+      already_authenticated: 'Je bent al ingelogd.'
+      unauthenticated: 'Je moet eerst inloggen om verder te kunnen gaan.'
+      unconfirmed: 'Je moet je account bevestigen om verder te kunnen gaan.'
+      locked: 'Je account werd opgeschort.'
+      invalid: 'Ongeldig mailadres of paswoord.'
+      invalid_token: 'Invalid authentication token.'
+      timeout: 'Je sessie is verlopen. Log opnieuw in om verder te gaan.'
+      inactive: 'Je account werd nog niet geactiveerd.'
+    sessions:
+      signed_in: 'Je bent nu ingelogd.'
+      signed_out: 'Je bent nu uitgelogd.'
+    passwords:
+      send_instructions: 'Binnen enkele minuten ontvang je een email met instructies om je paswoord te resetten.'
+      updated: 'Je paswoord werd aangepast. Je bent nu ingelogd'
+      updated_not_active: 'Je paswoord werd aangepast.'
+      send_paranoid_instructions: 'Als je mailadres in onze database gevonden wordt, zul je een mail ontvangen met een link om je paswoord te herstellen.'
+    confirmations:
+      send_instructions: 'Binnen enkele minuten ontvang je een email om je account te bevestigen.'
+      send_paranoid_instructions: 'Als je mailadres in onze database gevonden wordt, zul je een mail ontvangen met instructies om je account te bevestigen.'
+      confirmed: 'Je account werd bevestigd. Je bent nu ingelogd.'
+    registrations:
+      signed_up: 'Welkom! Je bent nu geregistreerd'
+      inactive_signed_up: 'Je bent nu geregistreerd, maar je bent nietingelogd omdat je account %{reason} is.'
+      updated: 'Je hebt je accountgegevens bijgewerkt.'
+      destroyed: 'Tot ziens! Je account werd verwijderd. We hopen je gauw terug te zien.'
+      reasons:
+        inactive: 'inactief'
+        unconfirmed: 'niet bevestigd'
+        locked: 'geschorst'
+    unlocks:
+      send_instructions: 'Binnen enkele minuten krijg je een email met instructies om je account te herstellen.'
+      unlocked: 'Je account werd hersteld. Je bent nu ingelogd.'
+      send_paranoid_instructions: 'Als je account bestaat, krijg je binnen enkele minuten je een email met instructies om je account te herstellen.'
+    omniauth_callbacks:
+      success: 'Je bent nu ingelogd met je %{kind} account.'
+      failure: 'We konden je niet inloggen via %{kind} omdat "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        subject: 'Je account bevestigen'
+      reset_password_instructions:
+        subject: 'Je paswoord resetten'
+      unlock_instructions:
+        subject: 'Je account herstellen'
