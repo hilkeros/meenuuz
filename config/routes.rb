@@ -4,8 +4,13 @@ Meenuuz::Application.routes.draw do
   get "pages/eigenaars"
   
   root to: "beta_testers#new"
+  match 'eigenaars' => 'beta_testers#owner'
   
-  resources :beta_testers
+  resources :beta_testers do
+    collection do
+      get 'owner'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

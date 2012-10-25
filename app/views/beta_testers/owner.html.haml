@@ -7,34 +7,36 @@
 	.row
 		.span5
 			.lead
-				%p Op zoek naar een restaurant of café? 
-				%p Vind wat je zoekt, bestel en betaal vlot.
-				%p Stukken slimmer!
+				%p Heb je een restaurant of café? 
+				%p Wees klaar voor de smartphone generatie!
 			%br	
 			.form-inline
-				= form_for @beta_tester do |f|
+				= form_for(@beta_tester, :url => beta_testers_path) do |f|
 					= f.text_field :email, :value => 'Je emailadres'
-					= f.hidden_field :interested_as, :value => 'user'
+					= f.hidden_field :interested_as, :value => 'owner'
 					= f.submit "Hou me op de hoogte", :class => "btn btn-large btn-primary"
-			=link_to "Heb je zelf een café of restaurant?", eigenaars_path
 		.span7	
 			.carousel.slide#myCarousel
 				.carousel-inner
 					.active.item
 						.cartext
-							%h3 1. Zoek een café of restaurant in de buurt
+							%h3 1. Je bent makkelijk te vinden
+							%h5 Je klanten zien of jouw restaurant of café in de buurt ligt
 							= image_tag("01-befound.png")
 					.item
 						.cartext
 							%h3 2. Eenvoudig bestellen
+							%h5 Je klanten krijgen snel een overzicht van je menukaart
 							= image_tag("02-ordering.png")
 					.item
 						.cartext
 							%h3 3. Snel afrekenen
+							%h5 Met één druk op de knop hebben je klanten de rekening betaalt
 							= image_tag("03-paying.png")
 					.item
 						.cartext
-							%h3 4. Je ervaring delen met je vrienden
+							%h3 4. Je klanten zijn je beste reclame
+							%h5 Je klanten vertellen hun vrienden over hun ervaring
 							= image_tag("04-rating.png")
 	
 	-#%a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
